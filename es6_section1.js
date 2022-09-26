@@ -132,3 +132,17 @@ let scores = [80, 70, 90];
 let copiedScores = [...scores];
 console.log(copiedScores);
 
+// Object
+let server = {
+    name: 'Server',
+    restart() {
+        console.log("The " + this.name + " is restarting...");
+    },
+    'starting up'() {
+        console.log("The " +  this.name + " is starting up!");
+    }
+};
+
+server['starting up']();
+server.restart();
+
