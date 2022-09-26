@@ -52,3 +52,46 @@ function stat(a, b) {
 
 let [sum, average, difference] = stat(20, 10);
 console.log(sum, average, difference);
+
+// Object Destructuring
+
+
+const person = {
+  firstName1: 'John',
+  lastName1: 'Doe',
+  currentAge: 28
+};
+
+let { firstName1, lastName1, currentAge=21} = person;
+console.log(firstName1);
+console.log(lastName1);
+console.log(currentAge);
+
+
+let employee = {
+  id: 1001,
+  name: {
+      firstName2: 'John',
+      lastName2: 'Smith'
+  }
+};
+
+let {
+  id,
+  name: {
+      firstName2,
+      lastName2
+  }
+} = employee;
+
+console.log(firstName2);
+console.log(lastName2); 
+
+let display = ({firstName3, lastName3}) => console.log(`${firstName3} ${lastName3}`);
+
+let person1 = {
+    firstName3: 'John',
+    lastName3: 'Doe'
+};
+
+display(person1);
