@@ -33,3 +33,40 @@ if (true) {
 console.log(`global l: ${l}`);
 console.log(`global v: ${v}`);
 
+// const keyword
+const count = 0;
+try {
+    count++;
+}
+catch (err) {
+    console.log('Error :', err.message);
+}
+
+if (count) {
+    console.log(count);
+}
+
+const company = {
+    name: 'ABC corp',
+    address: {
+        street: 'North 1st street',
+        city: 'San Jose',
+        state: 'CA',
+        zipcode: 95134
+    }
+};
+
+company.address.country = 'USA';
+// company = {};   <-----  Can't -> TypeError
+console.log(company);
+
+const colors = ['green', 'blue', 'red', 'orange'];
+for (let color of colors) {
+    console.log(color);
+}
+
+//for (const i = 0; i<colors.length; i++){  <----- Can't -> TypeError
+//    console.log(colors[i]);
+//}
+
+
