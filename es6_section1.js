@@ -18,3 +18,18 @@ for (var i = 0; i < 5; i++) {
     })(i);
 }
 
+// var keyword
+
+var v = 'v from global scope'
+let l = 'l from global scope'
+
+if (true) {
+    var v = 'v from local scope'
+    let l = 'l from local scope'
+
+    console.log(`local v: ${v}`);
+    console.log(`local l: ${l}`)
+}
+console.log(`global l: ${l}`);
+console.log(`global v: ${v}`);
+
