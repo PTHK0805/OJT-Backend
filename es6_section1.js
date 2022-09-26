@@ -69,4 +69,27 @@ for (let color of colors) {
 //    console.log(colors[i]);
 //}
 
+// Default Parameter
+function sayHello(message = 'Hello') {
+    console.log(message);
+}
+
+sayHello();
+sayHello('Hello World');
+
+function sayHi(message) {
+    message = (typeof message === 'undefined') ? 'Hi' : message;
+    console.log(message);
+}
+
+sayHi();
+
+let taxRate = () => 0.1;
+let getPrice = function( price, tax = price * taxRate() ) {
+    return price + tax;
+}
+
+let fullPrice = getPrice(100);
+console.log(fullPrice); 
+
 
