@@ -117,4 +117,18 @@ function sum(...args) {
 let result = sum(10,'Hi',null,undefined,20); 
 console.log(result);
 
+// Spread Operator
+const odd = [1,3,5];
+const combined = [2,...odd, 4,6];
+console.log(combined);
+
+let rivers = ['Nile', 'Ganges', 'Yangte'];
+let moreRivers = ['Danube', 'Amazon'];
+
+rivers.push(...moreRivers);
+console.log(rivers);
+
+let scores = [80, 70, 90];
+let copiedScores = [...scores];
+console.log(copiedScores);
 
