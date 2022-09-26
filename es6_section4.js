@@ -55,3 +55,19 @@ let pen = new Item('Pen', 5);
 let notebook = new Item('notebook', 10);
 
 console.log(Item.getCount());
+
+// Computed Property
+let name1 = 'fullName';
+
+class Person1 {
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+  get [name1]() {
+    return `${this.firstName} ${this.lastName}`;
+  }
+}
+
+let person1 = new Person1('John', 'Doe');
+console.log(person1.fullName);
