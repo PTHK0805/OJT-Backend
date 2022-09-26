@@ -71,3 +71,94 @@ class Person1 {
 
 let person1 = new Person1('John', 'Doe');
 console.log(person1.fullName);
+
+// Inheritance
+//function Animal(legs) {
+//  this.legs = legs;
+//}
+//
+//Animal.prototype.walk = function() {
+//  console.log('walking on ' + this.legs + ' legs');
+//}
+//
+//function Bird(legs) {
+//  Animal.call(this, legs);
+//}
+//
+//Bird.prototype = Object.create(Animal.prototype);
+//Bird.prototype.constructor = Animal;
+//
+//
+//Bird.prototype.fly = function() {
+//  console.log('flying');
+//}
+//
+//var pigeon = new Bird(2);
+//pigeon.walk(); 
+//pigeon.fly();  
+//
+//console.log(pigeon);
+
+class Animal {
+  constructor(legs) {
+    this.legs = legs;
+  }
+
+  walk() {
+    console.log(`walking on ${ this.legs } legs`);
+  }
+}
+
+class Birds extends Animal {
+  constructor(legs, color) {
+    super(legs);
+    this.color = color;
+  }
+
+  fly() {
+    console.log('flying');
+  }
+
+  walk() {
+    super.walk();
+    console.log(`walking on ${ this.legs } legs and color is ${this.color}`);
+  }
+}
+
+class Dogs extends Animal {
+  constructor(legs) {
+    super(legs);
+  }
+
+}
+
+const pigeon = new Birds(2,'green');
+pigeon.walk();
+pigeon.fly();
+
+const dog = new Dogs(4);
+dog.walk();
+
+class Queue extends Array {
+  enqueue(e) {
+      super.push(e);
+  }
+  dequeue() {
+      return super.shift();
+  }
+  peek() {
+      return !this.empty() ? this[0] : undefined;
+  }
+  empty() {
+      return this.length === 0;
+  }
+}
+
+var customers = new Queue();
+customers.enqueue('A');
+customers.enqueue('B');
+customers.enqueue('C');
+
+while (!customers.empty()) {
+  console.log(customers.dequeue());
+}
