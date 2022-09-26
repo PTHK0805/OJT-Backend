@@ -92,4 +92,29 @@ let getPrice = function( price, tax = price * taxRate() ) {
 let fullPrice = getPrice(100);
 console.log(fullPrice); 
 
+// Rest Parameter
+function numbers(a,b, ...args) {
+    console.log(args);
+    let result = 0;
+    for (number of args) {
+        result += number
+    }
+    console.log(result);
+}
+
+numbers(1, 2, 3, 4, 5);
+
+function sum(...args) {
+    return args
+      .filter(function (e) {
+        return typeof e === 'number';
+      })
+      .reduce(function (prev, curr) {
+        return prev + curr;
+      });
+}
+
+let result = sum(10,'Hi',null,undefined,20); 
+console.log(result);
+
 
