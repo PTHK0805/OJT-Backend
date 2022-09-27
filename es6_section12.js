@@ -15,3 +15,11 @@ console.log(title.endsWith('Up', 21));
 
 console.log();
 
+// Include
+let email = 'admin@example.com';
+console.log(email.includes('@'));
+
+let str = 'JavaScript String';
+console.log(str.includes('Script'));
+console.log(str.includes('script'));
+console.log(str.includes('Script', 5));
