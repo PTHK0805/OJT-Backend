@@ -8,17 +8,17 @@ console.log(chars.length);
 console.log(chars);
 
 if (!Array.of) {
-  Array.of = function() {
-      return Array.prototype.slice.call(arguments);
+  Array.of = function () {
+    return Array.prototype.slice.call(arguments);
   };
 }
 
 function arrayFromArgs() {
-    var results = [];
-    for (var i = 0; i < arguments.length; i++) {
-        results.push(arguments[i]);
-    }
-    return results;
+  var results = [];
+  for (var i = 0; i < arguments.length; i++) {
+    results.push(arguments[i]);
+  }
+  return results;
 }
 var fruits = arrayFromArgs('Apple', 'Orange', 'Banana');
 console.log(fruits);
@@ -41,7 +41,7 @@ console.log(addOne(1, 2, 3));
 let doubler = {
   factor: 2,
   double(x) {
-      return x * this.factor;
+    return x * this.factor;
   }
 }
 let scores = [5, 6, 7];
@@ -52,11 +52,33 @@ console.log(newScores);
 // Create an array from an iterable object
 let even = {
   *[Symbol.iterator]() {
-      for (let i = 0; i < 10; i += 2) {
-          yield i;
-      }
+    for (let i = 0; i < 10; i += 2) {
+      yield i;
+    }
   }
 };
 let evenNumbers = Array.from(even);
 console.log(evenNumbers);
+
+// Array Find
+let customers = [{
+  name: 'ABC Inc',
+  credit: 100
+}, {
+  name: 'ACME Corp',
+  credit: 200
+}, {
+  name: 'IoT AG',
+  credit: 300
+}];
+
+const newUser = [];
+
+for (let i = 0; i < customers.length; i++) {
+  const user = customers.find(customer => customer.credit > 100);
+
+  let index = customers.indexOf(user);
+  newUser.push(customers.splice(index, 1));
+}
+console.log(newUser);
 
