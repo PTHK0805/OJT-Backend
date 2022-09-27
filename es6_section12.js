@@ -8,3 +8,10 @@ console.log(title.startsWith('Jill', 10));
 
 console.log();
 
+// End With
+console.log(title.endsWith('Hill'));
+console.log(title.endsWith('hill'));
+console.log(title.endsWith('Up', 21));
+
+console.log();
+
