@@ -30,25 +30,25 @@ function getUser(userId) {
         userId: userId,
         userName: 'admin'
       })
-    }, 2000)
+    }, 1000)
   })
 }
 
 function getServices(user) {
   return new Promise((resolve, reject) => {
-      console.log(`Get the services of ${user.userName} from the API.`);
-      setTimeout(() => {
-          resolve(['Email', 'VPN', 'CDN']);
-      }, 3 * 1000);
+    console.log(`Get the services of ${user.userName} from the API.`);
+    setTimeout(() => {
+      resolve(['Email', 'VPN', 'CDN']);
+    }, 2000);
   });
 }
 
 function getServiceCost(services) {
   return new Promise((resolve, reject) => {
-      console.log(`Calculate the service cost of ${services}.`);
-      setTimeout(() => {
-          resolve(services.length * 100);
-      }, 2 * 1000);
+    console.log(`Calculate the service cost of ${services}.`);
+    setTimeout(() => {
+      resolve(services.length * 100);
+    }, 3000);
   });
 }
 
@@ -56,3 +56,54 @@ getUser(100)
   .then(users => getServices(users))
   .then(services => getServiceCost(services))
   .then(service => console.log(service));
+
+
+const p1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    console.log('The first Promise is solved...');
+    resolve(10);
+  }, 4000)
+});
+
+const p2 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    console.log('The second Promise is solved...');
+    resolve(20);
+  }, 4000)
+});
+
+const p3 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    console.log('The third Promise is solved...');
+    resolve(30);
+  }, 4000)
+});
+
+const p4 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+      console.log('The first promise has resolved');
+      resolve(10);
+  }, 1 * 1000);
+
+});
+
+const p5 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+      console.log('The second promise has rejected');
+      reject(20);
+  }, 2 * 1000);
+});
+
+
+Promise.race([p4, p5])
+  .then(value => console.log(`Resolved: ${value}`))
+  .catch(reason => console.log(`Rejected: ${reason}`));
+
+
+Promise.all([p1, p2, p3]).then(result => {
+  const total = result.reduce((prev, curr) => prev + curr);
+  console.log(`Result: ${result}`)
+  console.log(`Total: ${total}`);
+}).catch(err => console.log(err));
+
+
