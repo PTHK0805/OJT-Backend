@@ -9,16 +9,18 @@ export class TestComponent implements OnInit {
   appName = "My first app in Angular"
   userName: string = "Peter"
   colspan = 2;
+  myCSSClass = "red";
+  applyCSSClass = true;
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  showData($event: any){ 
-    console.log("button is clicked!"); if($event) { 
-       console.log($event.target); 
-       console.log($event.target.value); 
-    } 
- }  
+  showData($event: any) {
+    console.log("button is clicked!"); if ($event) {
+      console.log($event.target);
+      console.log($event.target.value);
+    }
+  }
 
 }
