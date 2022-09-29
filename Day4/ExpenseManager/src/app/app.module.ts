@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { DebugService } from './services/debug.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -11,12 +12,12 @@ import { TestComponent } from './test/test.component';
   declarations: [
     AppComponent,
     ExpenseEntryComponent,
-    TestComponent,
-    
+    TestComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
     DebugService

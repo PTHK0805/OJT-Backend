@@ -11,6 +11,7 @@ export class TestComponent implements OnInit {
   colspan = 2;
   myCSSClass = "red";
   applyCSSClass = true;
+  myColor = 'brown';
   constructor() { }
 
   ngOnInit(): void {
