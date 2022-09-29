@@ -11,7 +11,8 @@ import { TestComponent } from './test/test.component';
   declarations: [
     AppComponent,
     ExpenseEntryComponent,
-    TestComponent
+    TestComponent,
+    
   ],
   imports: [
     BrowserModule,

@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestComponent implements OnInit {
   appName = "My first app in Angular"
+  userName:string = "Peter"
   constructor() { }
 
   ngOnInit(): void {
