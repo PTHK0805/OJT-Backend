@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "expense-manager": {
+    "ExpenseManager": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "expense-manager:build:production"
+              "browserTarget": "ExpenseManager:build:production"
             },
             "development": {
-              "browserTarget": "expense-manager:build:development"
+              "browserTarget": "ExpenseManager:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "expense-manager:build"
+            "browserTarget": "ExpenseManager:build"
           }
         },
         "test": {
@@ -105,6 +105,6 @@
     }
   },
   "cli": {
-    "analytics": "24aa07f7-5b53-4e1a-b6c5-b0b4c2df2eb6"
+    "analytics": "9f32fa7e-311b-4924-a442-d147f1c9120f"
   }
 }
