@@ -1,3 +1,4 @@
+import { DebugService } from './services/debug.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -14,7 +15,9 @@ import { ExpenseEntryComponent } from './expense-entry/expense-entry.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    DebugService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
