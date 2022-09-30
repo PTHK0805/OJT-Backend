@@ -1,0 +1,63 @@
+
+<h2>Table Sample</h2>
+
+<div class="input-container">
+  <div class="clearfix">
+    <label for="id">ID: </label>
+    <input id="id" type="number" [(ngModel)]="people[id-1].id">
+  </div>
+  
+  <div class="clearfix">
+    <label for="id">Name: </label>
+    <input id="id" type="text" [(ngModel)]="people[id-1].name">
+  </div>
+  
+  <div class="clearfix">
+    <label for="id">Country: </label>
+    <input id="id" type="text" [(ngModel)]="people[id-1].country">
+  </div>
+</div>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>{{people[0].id}}</td>
+    <td>{{people[0].name}}</td>
+    <td>{{people[0].country}}</td>
+  </tr>
+  <tr>
+    <td>{{people[1].id}}</td>
+    <td>{{people[1].name}}</td>
+    <td>{{people[1].country}}</td>
+  </tr>
+  <tr>
+    <td>{{people[2].id}}</td>
+    <td>{{people[2].name}}</td>
+    <td>{{people[2].country}}</td>
+  </tr>
+  <tr>
+    <td>{{people[3].id}}</td>
+    <td>{{people[3].name}}</td>
+    <td>{{people[3].country}}</td>
+  </tr>
+  <tr>
+    <td>{{people[4].id}}</td>
+    <td>{{people[4].name}}</td>
+    <td>{{people[4].country}}</td>
+  </tr>
+  <tr>
+    <td>{{people[5].id}}</td>
+    <td>{{people[5].name}}</td>
+    <td>{{people[5].country}}</td>
+  </tr>
+  <tr>
+    <td>{{people[6].id}}</td>
+    <td>{{people[6].name}}</td>
+    <td>{{people[6].country}}</td>
+  </tr>
+  
+</table>

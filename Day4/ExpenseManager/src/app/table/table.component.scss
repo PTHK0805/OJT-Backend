@@ -1,0 +1,47 @@
+table,
+td,
+th,
+tr {
+  border: 1px solid #000;
+  border-collapse: collapse;
+}
+
+h2 {
+  padding-top: 50px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.clearfix::after, .clearfix::before{
+  display: block;
+  clear: both;
+  height: 0;
+  content: "";
+}
+
+.input-container {
+  width: 300px;
+  margin: 0 auto;
+  padding-bottom: 10px;
+
+  div {
+    label {
+      float: left;
+    }
+
+    input {
+      float: right;
+    }
+  }
+
+
+}
+
+table {
+  width: 70%;
+  margin: 0 auto;
+}
+
+tr:nth-of-type(even) {
+  background-color: rgb(212, 205, 205);
+}
