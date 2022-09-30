@@ -11,6 +11,7 @@ import { TableComponent } from './table/table.component';
 import { DirectiveTestComponent } from './directives/directive-test/directive-test.component';
 import { CustomstyleDirective } from './customstyle.directive';
 import { ChildComponent } from './components/child/child.component';
+import { ExpenseEntryListComponent } from './components/expense-entry-list/expense-entry-list.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ChildComponent } from './components/child/child.component';
     TableComponent,
     DirectiveTestComponent,
     CustomstyleDirective,
-    ChildComponent
+    ChildComponent,
+    ExpenseEntryListComponent
   ],
   imports: [
     BrowserModule,
