@@ -7,7 +7,7 @@ import { Component, OnInit, ɵɵstylePropInterpolate1 } from '@angular/core';
 })
 export class TableComponent implements OnInit {
   id: number = 2;
-  personName = '';
+ 
   people = [
     { id: 1, name: 'Wisdom Jed', country: 'United States' },
     { id: 2, name: 'Dusty Ethelbert', country: 'United Kingdom' },
@@ -20,7 +20,7 @@ export class TableComponent implements OnInit {
 
   onKeyUp() {
     this.id = this.people[this.id - 1].id;
-    this.personName = this.people[this.id - 1].name;
+    
   }
 
   constructor() { }
