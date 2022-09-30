@@ -3,8 +3,9 @@
 
 <div class="input-container">
   <div class="clearfix">
+    <p>Please click Enter after selecting ID: and you can change Name: and Country:</p>
     <label for="id">ID: </label>
-    <input id="id" type="number" [(ngModel)]="people[id-1].id">
+    <input id="id" type="number" [(ngModel)]="people[id-1].id" (keyup)="onKeyUp()">
   </div>
   
   <div class="clearfix">
