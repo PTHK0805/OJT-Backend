@@ -1,0 +1,61 @@
+<div *ngIf="isNeeded"> 
+  Only render if the *isNeeded* value has true value. 
+</div>
+<div *ngIf="true">Display data</div>
+
+<p>ngIfElse example!</p> 
+<div *ngIf="isLogIn; else isLogOut"> 
+   Hello you are logged in 
+</div>
+<ng-template #isLogOut> 
+   You're logged out.. 
+</ng-template>
+
+<h2>ngFor directive</h2> 
+<ul> 
+   <li *ngFor="let l of list">
+      {{l}} 
+   </li>
+</ul>
+
+<ul> 
+  <li *ngFor="let std of studentArr">
+     {{std.name}} 
+  </li>
+</ul>
+
+<h2>ngSwitch directive</h2> 
+<ul [ngSwitch]="logInName"> 
+   <li *ngSwitchCase="'user'"> 
+      <p>User is logged in..</p> 
+   </li> 
+   <li *ngSwitchCase="'admin'"> 
+      <p>admin is logged in</p> 
+   </li> 
+   <li *ngSwitchDefault> 
+      <p>Please choose login name</p> 
+   </li> 
+</ul>
+
+<p [ngStyle]="{'color': 'blue', 'font-size': '14px'}"> 
+  paragraph style is applied using ngStyle 
+</p>
+
+<div class="container"> 
+  <br/> 
+  <div *ngFor="let user of users" [ngClass]=" user.userName === 'User1' ? 'highlight': '' "> 
+     {{ user.userName }} 
+  </div> 
+</div>
+
+<p appCustomstyle>The text will shown with the font size of 24px</p>
+
+<h3>ng-template</h3> 
+<ng-template  [ngIf]=true>ng-template tag is a virtual element</ng-template>
+
+<ng-template [ngIf]=true> 
+  <div><h2>ng-template works!</h2></div> 
+</ng-template>
+
+<h1>Test component</h1> 
+<app-child [userName]="name"><app-child>

@@ -8,13 +8,19 @@ import { AppComponent } from './app.component';
 import { ExpenseEntryComponent } from './expense-entry/expense-entry.component';
 import { TestComponent } from './test/test.component';
 import { TableComponent } from './table/table.component';
+import { DirectiveTestComponent } from './directives/directive-test/directive-test.component';
+import { CustomstyleDirective } from './customstyle.directive';
+import { ChildComponent } from './components/child/child.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ExpenseEntryComponent,
     TestComponent,
-    TableComponent
+    TableComponent,
+    DirectiveTestComponent,
+    CustomstyleDirective,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
