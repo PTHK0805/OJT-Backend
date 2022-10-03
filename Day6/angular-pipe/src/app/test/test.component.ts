@@ -11,6 +11,7 @@ export class TestComponent implements OnInit {
     Fruits = ["Apple", "Orange", "Grapes", "Mango", "Kiwi", "Pomegranate"];
     decimalNum1: number = 8.7589623;
     decimalNum2: number = 5.43;
+    decimalNum3: number = 0.8178; 
     presentDate = new Date();
     //timeChange: any;
 
