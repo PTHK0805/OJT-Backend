@@ -7,7 +7,7 @@ import { Observable, Observer, Subject } from 'rxjs';
   styleUrls: ['./test.component.scss']
 })
 export class TestComponent implements OnInit {
-  
+  price: number = 20000;
   presentDate = new Date(); 
   //timeChange: any;
   

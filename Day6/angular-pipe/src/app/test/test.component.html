@@ -15,3 +15,10 @@
   <!--Seconds changing in Time: {{ timeChange | date:'h:mm:ss'}}-->
   Seconds changing in Time: {{ timeChange | async}}
 </div>
+<br>
+
+<div style="text-align:center"> 
+  <h3> Currency Pipe</h3> 
+  <p>{{ price | currency:'EUR':true:'3.0-0'}}</p> 
+  <p>{{ price | currency:'USD' }}</p> 
+</div> 
