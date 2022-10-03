@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable, Observer, Subject } from 'rxjs';
 
 @Component({
   selector: 'app-test',
@@ -6,10 +7,32 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./test.component.scss']
 })
 export class TestComponent implements OnInit {
+  
   presentDate = new Date(); 
-  constructor() { }
+  //timeChange: any;
+  
+  //timeChange = new Observable((observer: Observer<string>) => {
+  //  setInterval(() => observer.next(new
+  //  Date().toString()), 1000);
+  //});
 
-  ngOnInit(): void {
+  //timeChange = new Observable((observer) => {
+  //  setInterval(() => {
+  //    observer.next(new Date().toString())
+  //  },1000)
+  //})
+
+  
+  //ngOnInit() { 
+  //setInterval(() => {
+  //  this.timeChange = new Date();
+  //},1000)
+  //}
+  //
+  timeChange = new Subject();
+  ngOnInit() {
+    setInterval(() => {
+      this.timeChange.next(new Date().toString());
+    },1000)
   }
-
 }

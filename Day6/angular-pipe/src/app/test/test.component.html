@@ -10,3 +10,8 @@
   Date with uppercase :- {{presentDate | date:'fullDate' | uppercase}} <br/>
   Date with lowercase :- {{presentDate | date:'medium' | lowercase}} <br/>  
 </div>
+<br>
+<div> 
+  <!--Seconds changing in Time: {{ timeChange | date:'h:mm:ss'}}-->
+  Seconds changing in Time: {{ timeChange | async}}
+</div>
