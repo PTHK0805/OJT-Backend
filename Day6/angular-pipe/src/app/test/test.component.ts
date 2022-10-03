@@ -8,6 +8,7 @@ import { Observable, Observer, Subject } from 'rxjs';
 })
 export class TestComponent implements OnInit {
   price: number = 20000;
+  Fruits = ["Apple","Orange","Grapes","Mango","Kiwi","Pomegranate"];
   presentDate = new Date(); 
   //timeChange: any;
   

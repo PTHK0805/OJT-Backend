@@ -21,4 +21,12 @@
   <h3> Currency Pipe</h3> 
   <p>{{ price | currency:'EUR':true:'3.0-0'}}</p> 
   <p>{{ price | currency:'USD' }}</p> 
-</div> 
+</div>
+<br>
+
+<div> 
+  <h3>Start index:- {{Fruits | slice:2}}</h3> 
+  <h4>Start and end index:- {{Fruits | slice:1:4}}</h4> 
+  <h5>Negative index:- {{Fruits | slice:-2}}</h5> 
+  <h6>Negative start and end index:- {{Fruits | slice:-4:-2}}</h6> 
+</div>
