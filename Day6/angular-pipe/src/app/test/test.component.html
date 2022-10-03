@@ -1,1 +1,12 @@
-<p>test works!</p>
+<div> 
+  Today's date :- {{presentDate | date}} 
+</div>
+<br>
+<div> 
+  short date :- {{presentDate | date:'shortDate' }} <br/>
+  Full date :- {{presentDate | date:'fullDate' }} <br/> 
+  Formatted date:- {{presentDate | date:'M/dd/yyyy'}} <br/> 
+  Hours and minutes:- {{presentDate | date:'h:mm'}} <br/>
+  Date with uppercase :- {{presentDate | date:'fullDate' | uppercase}} <br/>
+  Date with lowercase :- {{presentDate | date:'medium' | lowercase}} <br/>  
+</div>
