@@ -12,6 +12,7 @@ export class TestComponent implements OnInit {
     decimalNum1: number = 8.7589623;
     decimalNum2: number = 5.43;
     decimalNum3: number = 0.8178; 
+    jsonData = { id: 'one', name: { username: 'user1' }} 
     presentDate = new Date();
     //timeChange: any;
 

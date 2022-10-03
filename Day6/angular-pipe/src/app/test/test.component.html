@@ -46,3 +46,11 @@
   <h3>Percent Pipe</h3> 
   <p> {{decimalNum3 | percent:'2.2'}} </p> 
 </div> 
+<br>
+
+<div> 
+  <p ngNonBindable>{{ jsonData }}</p> (1) 
+  <p>{{ jsonData }}</p> 
+  <p ngNonBindable>{{ jsonData | json }}</p> 
+  <p>{{ jsonData | json }}</p> 
+</div> 
