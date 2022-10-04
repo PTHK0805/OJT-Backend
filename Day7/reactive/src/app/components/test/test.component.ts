@@ -12,6 +12,8 @@ export class TestComponent implements OnInit {
   val1: number = 0;
   filteredNumbers: any = [];
   val2: number = 0;
+  mappedNumbers: any[] = [];
+  val3: number = 0;
   constructor() { }
 
   ngOnInit(): void {
@@ -49,7 +51,11 @@ export class TestComponent implements OnInit {
     console.log('FilteredNumber : ', this.filteredNumbers);
     console.log('Total :', this.val2);
     
-
+    const mappedNumbers$ = map((num: number) => num + num)(numbers$);
+    mappedNumbers$.subscribe((num: number) => { this.mappedNumbers.push(num); this.val3 += num });
+    console.log('MappedNumbers', this.mappedNumbers);
+    console.log('Total', this.val3);
+    
   }
 
 }
