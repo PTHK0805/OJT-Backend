@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { filter, from, of } from 'rxjs';
+import { filter, from, fromEvent, map, of } from 'rxjs';
 import { ajax } from 'rxjs/ajax';
 
 @Component({
@@ -42,8 +42,7 @@ export class TestComponent implements OnInit {
     console.log('Filterednumbers', this.filteredNumbers);
     console.log('Total', this.val2);
 
-
-
   }
 
 }
+
