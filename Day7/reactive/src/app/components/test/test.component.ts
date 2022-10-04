@@ -34,13 +34,21 @@ export class TestComponent implements OnInit {
     //  console.log('Observation completed', this.numbers, this.val1)
     //});
 
-    const filterFn = filter((num: number) => num > 5);
-    const filteredNumbers$ = filterFn(numbers$);
+    //const filterFn = filter((num: number) => num > 5);
+    //const filteredNumbers$ = filterFn(numbers$);
+    //filteredNumbers$.subscribe((num: number) => {
+    //  this.filteredNumbers.push(num); this.val2 += num
+    //});
+    //console.log('Filterednumbers', this.filteredNumbers);
+    //console.log('Total', this.val2);
+
+    const filteredNumbers$ = filter((num: number) => num > 5)(numbers$);
     filteredNumbers$.subscribe((num: number) => {
-      this.filteredNumbers.push(num); this.val2 += num
-    });
-    console.log('Filterednumbers', this.filteredNumbers);
-    console.log('Total', this.val2);
+      this.filteredNumbers.push(num); this.val2 += num;
+    })
+    console.log('FilteredNumber : ', this.filteredNumbers);
+    console.log('Total :', this.val2);
+    
 
   }
 
