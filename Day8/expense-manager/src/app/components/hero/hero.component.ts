@@ -15,8 +15,13 @@ export class HeroComponent implements OnInit {
     this.getHeroes();
   }
 
+  //getHeroes(): void {
+  //  this.heroes = this.heroService.getHeroes();
+  //}
+
   getHeroes(): void {
-    this.heroes = this.heroService.getHeroes();
+    this.heroService.getHeroes()
+        .subscribe(heroes => this.heroes = heroes);
   }
 
 }
