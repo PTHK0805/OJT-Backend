@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { MessageService } from './../../services/message.service';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { Hero } from 'src/app/interfaces/hero';
 
 @Component({
@@ -9,9 +10,16 @@ import { Hero } from 'src/app/interfaces/hero';
 export class ChildComponent implements OnInit {
 
   @Input() heroes: Hero[] = [];
-  constructor() { }
+  selectedHero?: Hero;
+  constructor(private messageService: MessageService) { }
 
   ngOnInit(): void {
   }
+
+  onSelect(hero: Hero): void {
+    this.selectedHero = hero;
+    this.messageService.add(`HeroesComponent: Selected hero id=${hero.id}`);
+  }
+
 
 }
