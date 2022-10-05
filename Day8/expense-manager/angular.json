@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "expense-manager": {
+    "dependency-injection": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/expense-manager",
+            "outputPath": "dist/dependency-injection",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "expense-manager:build:production"
+              "browserTarget": "dependency-injection:build:production"
             },
             "development": {
-              "browserTarget": "expense-manager:build:development"
+              "browserTarget": "dependency-injection:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "expense-manager:build"
+            "browserTarget": "dependency-injection:build"
           }
         },
         "test": {
