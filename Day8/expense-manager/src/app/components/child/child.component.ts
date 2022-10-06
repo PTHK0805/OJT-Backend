@@ -1,6 +1,6 @@
 import { HeroService } from 'src/app/services/hero.service';
 import { MessageService } from './../../services/message.service';
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Hero } from 'src/app/interfaces/hero';
 
 @Component({
@@ -12,6 +12,7 @@ export class ChildComponent implements OnInit {
 
   public btnCount: number = 0;
   @Input() heroes: Hero[] = [];
+  @Output() btnClickCount = new EventEmitter();
   selectedHero?: Hero;
   constructor(private messageService: MessageService, private heroService: HeroService) { }
 
@@ -29,7 +30,8 @@ export class ChildComponent implements OnInit {
   count() {
     this.btnCount += 1;
     console.log(this.btnCount);
-    this.heroService.btnCountSubject$.next(this.btnCount);
+    //this.heroService.btnCountSubject$.next(this.btnCount);
+    this.btnClickCount.emit(this.btnCount);
   }
 
 }

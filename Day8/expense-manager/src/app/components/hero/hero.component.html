@@ -1,2 +1,2 @@
-<app-child [heroes]="heroes" ></app-child>
+<app-child [heroes]="heroes" (btnClickCount)="btnParentCount($event)" ></app-child>
 <h1>Parent Count :{{count}}</h1>

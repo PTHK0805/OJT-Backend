@@ -16,7 +16,7 @@ export class HeroComponent implements OnInit {
 
   ngOnInit(): void {
     this.getHeores();
-    this.heroService.btnCountSubject$.subscribe((data: any) => this.count = data);
+    //this.heroService.btnCountSubject$.subscribe((data: any) => this.count = data);
   }
 
   //getHeroes(): void {
@@ -33,6 +33,10 @@ export class HeroComponent implements OnInit {
     setTimeout(() => {
       this.heroService.subject$.next(heroes);
     }, 100)
+  }
+
+  btnParentCount(value: any) {
+    this.count = value;
   }
 
 }
