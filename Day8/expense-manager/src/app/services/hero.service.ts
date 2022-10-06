@@ -9,6 +9,8 @@ import { Observable, of, Subject } from 'rxjs';
 export class HeroService {
 
   public subject$ = new Subject();
+  public btnCountSubject$ = new Subject();
+  
   constructor(private messageService: MessageService) { }
   //getHeroes(): Hero[] {
   //  return HEROES;

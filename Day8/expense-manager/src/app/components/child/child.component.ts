@@ -10,6 +10,7 @@ import { Hero } from 'src/app/interfaces/hero';
 })
 export class ChildComponent implements OnInit {
 
+  public btnCount: number = 0;
   @Input() heroes: Hero[] = [];
   selectedHero?: Hero;
   constructor(private messageService: MessageService, private heroService: HeroService) { }
@@ -25,5 +26,10 @@ export class ChildComponent implements OnInit {
     this.messageService.add(`HeroesComponent: Selected hero id=${hero.id}`);
   }
 
+  count() {
+    this.btnCount += 1;
+    console.log(this.btnCount);
+    this.heroService.btnCountSubject$.next(this.btnCount);
+  }
 
 }

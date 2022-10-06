@@ -11,10 +11,12 @@ export class HeroComponent implements OnInit {
 
   heroes: Hero[] = [];
   selectedHero?: Hero;
+  public count = 0;
   constructor(private heroService: HeroService, private messageService: MessageService) {}
 
   ngOnInit(): void {
     this.getHeores();
+    this.heroService.btnCountSubject$.subscribe((data: any) => this.count = data);
   }
 
   //getHeroes(): void {
