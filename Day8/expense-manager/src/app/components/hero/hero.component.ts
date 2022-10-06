@@ -14,16 +14,23 @@ export class HeroComponent implements OnInit {
   constructor(private heroService: HeroService, private messageService: MessageService) {}
 
   ngOnInit(): void {
-    this.getHeroes();
+    this.getHeores();
   }
 
   //getHeroes(): void {
   //  this.heroes = this.heroService.getHeroes();
   //}
 
-  getHeroes(): void {
-    this.heroService.getHeroes()
-        .subscribe(heroes => this.heroes = heroes);
+  //getHeroes(): void {
+  //  this.heroService.getHeroes()
+  //      .subscribe(heroes => this.heroes = heroes);
+  //}
+
+  async getHeores() {
+    const heroes = this.heroService.getHeroes();
+    setTimeout(() => {
+      this.heroService.subject$.next(heroes);
+    }, 100)
   }
 
 }
