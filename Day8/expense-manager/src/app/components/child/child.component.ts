@@ -16,7 +16,7 @@ export class ChildComponent implements OnInit {
   @Input() heroes: Hero[] = [];
   @Output() btnClickCount = new EventEmitter();
   selectedHero?: Hero;
-
+  
   myControl = new FormControl('');
   options: string[] = ['One', 'Two', 'Three'];
   filteredOptions!: Observable<string[]>;

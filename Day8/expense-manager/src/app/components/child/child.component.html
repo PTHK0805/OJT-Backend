@@ -8,7 +8,8 @@
   </li>
 </ul>
 
-<mat-slider min="1" max="100" step="1" value="50"></mat-slider>
+<mat-slider min="1" max="100" step="1" value="50" #mslider ></mat-slider>
+<div>Slider Value : {{mslider.value}}</div>
 <button (click)="count()">Count</button>
 <h1>Child Count :{{btnCount}}</h1>
 
