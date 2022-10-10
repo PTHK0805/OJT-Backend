@@ -30,6 +30,9 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatRadioModule } from '@angular/material/radio';
+import { ChipsComponent } from './components/chips/chips.component';
+import { MatChipsModule } from '@angular/material/chips';
+
 
 @NgModule({
   declarations: [
@@ -44,6 +47,7 @@ import { MatRadioModule } from '@angular/material/radio';
     ButtonTogglesComponent,
     CardComponent,
     CheckboxComponent,
+    ChipsComponent,
   ],
   imports: [
     BrowserModule,
@@ -66,7 +70,8 @@ import { MatRadioModule } from '@angular/material/radio';
     MatCardModule,
     MatProgressBarModule,
     MatCheckboxModule,
-    MatRadioModule
+    MatRadioModule,
+    MatChipsModule
 
   ],
   providers: [],
