@@ -34,4 +34,4 @@ $component-lifecycle-hooks-theme: mat.define-light-theme((
 @include mat.all-component-themes($component-lifecycle-hooks-theme);
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 20px; font-family: Roboto, "Helvetica Neue", sans-serif; }

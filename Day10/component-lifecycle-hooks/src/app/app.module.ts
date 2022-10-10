@@ -12,12 +12,18 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
+import { BadgeComponent } from './components/badge/badge.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import {MatBadgeModule} from '@angular/material/badge';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AboutComponent,
-    AutoCompleteComponent
+    AutoCompleteComponent,
+    BadgeComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,7 +34,11 @@ import { MatInputModule } from '@angular/material/input';
     FormsModule,
     MatFormFieldModule,
     ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
+    MatDialogModule,
+    MatIconModule,
+    MatButtonModule,
+    MatBadgeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
