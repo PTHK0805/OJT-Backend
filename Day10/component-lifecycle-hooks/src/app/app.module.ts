@@ -27,6 +27,9 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { CardComponent } from './components/card/card.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { CheckboxComponent } from './components/checkbox/checkbox.component';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -40,6 +43,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     ButtonComponent,
     ButtonTogglesComponent,
     CardComponent,
+    CheckboxComponent,
   ],
   imports: [
     BrowserModule,
@@ -60,7 +64,10 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     MatSidenavModule,
     MatButtonToggleModule,
     MatCardModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatCheckboxModule,
+    MatRadioModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
