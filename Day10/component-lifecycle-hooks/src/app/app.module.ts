@@ -35,8 +35,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { DatepickerComponent } from './components/datepicker/datepicker.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-
-
+import { DialogAnimationsExample } from './components/dialog/dialog-animations-example';
 
 @NgModule({
   declarations: [
@@ -53,6 +52,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     CheckboxComponent,
     ChipsComponent,
     DatepickerComponent,
+    DialogAnimationsExample,
   ],
   imports: [
     BrowserModule,
