@@ -32,6 +32,10 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatRadioModule } from '@angular/material/radio';
 import { ChipsComponent } from './components/chips/chips.component';
 import { MatChipsModule } from '@angular/material/chips';
+import { DatepickerComponent } from './components/datepicker/datepicker.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+
 
 
 @NgModule({
@@ -48,6 +52,7 @@ import { MatChipsModule } from '@angular/material/chips';
     CardComponent,
     CheckboxComponent,
     ChipsComponent,
+    DatepickerComponent,
   ],
   imports: [
     BrowserModule,
@@ -71,8 +76,9 @@ import { MatChipsModule } from '@angular/material/chips';
     MatProgressBarModule,
     MatCheckboxModule,
     MatRadioModule,
-    MatChipsModule
-
+    MatChipsModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
