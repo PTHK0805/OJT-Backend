@@ -24,6 +24,9 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { ButtonComponent } from './components/button/button.component';
 import { ButtonTogglesComponent } from './components/button-toggles/button-toggles.component';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import { CardComponent } from './components/card/card.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [
@@ -36,6 +39,7 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     BottomSheetOverviewExampleSheet,
     ButtonComponent,
     ButtonTogglesComponent,
+    CardComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,7 +58,9 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     MatBottomSheetModule,
     MatListModule,
     MatSidenavModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatCardModule,
+    MatProgressBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
