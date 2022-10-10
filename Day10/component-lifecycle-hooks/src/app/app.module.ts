@@ -17,6 +17,10 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import {MatBadgeModule} from '@angular/material/badge';
+import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
+import { BottomSheetOverviewExample, BottomSheetOverviewExampleSheet } from './components/bottom-sheet/bottom-sheet-overview-example';
+import { MatListModule } from '@angular/material/list';
+import { MatSidenavModule } from '@angular/material/sidenav';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +28,8 @@ import {MatBadgeModule} from '@angular/material/badge';
     AboutComponent,
     AutoCompleteComponent,
     BadgeComponent,
+    BottomSheetOverviewExample,
+    BottomSheetOverviewExampleSheet,
   ],
   imports: [
     BrowserModule,
@@ -38,7 +44,10 @@ import {MatBadgeModule} from '@angular/material/badge';
     MatDialogModule,
     MatIconModule,
     MatButtonModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatBottomSheetModule,
+    MatListModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]
