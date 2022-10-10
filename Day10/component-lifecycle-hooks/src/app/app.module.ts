@@ -21,6 +21,7 @@ import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { BottomSheetOverviewExample, BottomSheetOverviewExampleSheet } from './components/bottom-sheet/bottom-sheet-overview-example';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { ButtonComponent } from './components/button/button.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +31,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     BadgeComponent,
     BottomSheetOverviewExample,
     BottomSheetOverviewExampleSheet,
+    ButtonComponent,
   ],
   imports: [
     BrowserModule,
