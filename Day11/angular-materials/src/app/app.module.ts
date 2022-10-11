@@ -26,6 +26,11 @@ import { MenuComponent } from './components/menu/menu.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { PaginatorComponent } from './components/paginator/paginator.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { ProgressBarComponent } from './components/progress-bar/progress-bar.component';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatCardModule } from '@angular/material/card';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatSliderModule } from '@angular/material/slider';
 
 @NgModule({
   declarations: [
@@ -38,7 +43,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     InputComponent,
     ListComponent,
     MenuComponent,
-    PaginatorComponent
+    PaginatorComponent,
+    ProgressBarComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +63,11 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     ReactiveFormsModule,
     MatGridListModule,
     MatMenuModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatProgressBarModule,
+    MatCardModule,
+    MatRadioModule,
+    MatSliderModule
   ],
   providers: [
     MatDatepickerModule,  
