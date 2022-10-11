@@ -19,6 +19,7 @@ import { FormFieldComponent } from './components/form-field/form-field.component
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GridListComponent } from './components/grid-list/grid-list.component';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { IconComponent } from './components/icon/icon.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
     DividerComponent,
     ExpansionPanelComponent,
     FormFieldComponent,
-    GridListComponent
+    GridListComponent,
+    IconComponent
   ],
   imports: [
     BrowserModule,
