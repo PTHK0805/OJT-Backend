@@ -15,12 +15,15 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
+import { FormFieldComponent } from './components/form-field/form-field.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     DividerComponent,
-    ExpansionPanelComponent
+    ExpansionPanelComponent,
+    FormFieldComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,9 @@ import { MatButtonModule } from '@angular/material/button';
     MatIconModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [
     MatDatepickerModule,  
