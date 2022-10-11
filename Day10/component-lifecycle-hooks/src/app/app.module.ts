@@ -13,7 +13,6 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { BadgeComponent } from './components/badge/badge.component';
-import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import {MatBadgeModule} from '@angular/material/badge';
@@ -35,7 +34,9 @@ import { MatChipsModule } from '@angular/material/chips';
 import { DatepickerComponent } from './components/datepicker/datepicker.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-import { DialogAnimationsExample } from './components/dialog/dialog-animations-example';
+import { DialogAnimationsExample, DialogAnimationsExampleDialog, DialogContentExampleDialog, DialogDataExampleDialog, DialogFromMenuExampleDialog, DialogOverviewExampleDialog } from './components/dialog/dialog-animations-example';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,11 @@ import { DialogAnimationsExample } from './components/dialog/dialog-animations-e
     ChipsComponent,
     DatepickerComponent,
     DialogAnimationsExample,
+    DialogAnimationsExampleDialog,
+    DialogContentExampleDialog,
+    DialogDataExampleDialog,
+    DialogFromMenuExampleDialog,
+    DialogOverviewExampleDialog
   ],
   imports: [
     BrowserModule,
@@ -64,7 +70,6 @@ import { DialogAnimationsExample } from './components/dialog/dialog-animations-e
     MatFormFieldModule,
     ReactiveFormsModule,
     MatInputModule,
-    MatDialogModule,
     MatIconModule,
     MatButtonModule,
     MatBadgeModule,
@@ -79,6 +84,8 @@ import { DialogAnimationsExample } from './components/dialog/dialog-animations-e
     MatChipsModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatDialogModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

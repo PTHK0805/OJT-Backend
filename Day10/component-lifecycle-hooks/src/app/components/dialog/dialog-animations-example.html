@@ -1,2 +1,25 @@
 <button mat-raised-button (click)="openDialog('0ms', '0ms')">Open dialog without animation</button>
 <button mat-raised-button (click)="openDialog('3000ms', '1500ms')">Open dialog slowly</button>
+<button mat-button (click)="openDialog2()">Open dialog</button>
+<button mat-button (click)="openDialog3()">Open Data Dialog</button>
+
+<button mat-button [matMenuTriggerFor]="menu" #menuTrigger>Menu</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item (click)="openDialog4()">Open dialog</button>
+</mat-menu>
+
+<ol>
+  <li>
+    <mat-form-field appearance="fill">
+      <mat-label>What's your name?</mat-label>
+      <input matInput [(ngModel)]="name">
+    </mat-form-field>
+  </li>
+  <li>
+    <button mat-raised-button (click)="openDialog5()">Pick one</button>
+  </li>
+  <li *ngIf="anotherAnimal">
+    You chose: <i>{{anotherAnimal}}</i>
+  </li>
+</ol>
+
