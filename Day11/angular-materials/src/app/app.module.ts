@@ -22,6 +22,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { IconComponent } from './components/icon/icon.component';
 import { InputComponent } from './components/input/input.component';
 import { ListComponent } from './components/list/list.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import { ListComponent } from './components/list/list.component';
     GridListComponent,
     IconComponent,
     InputComponent,
-    ListComponent
+    ListComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +52,8 @@ import { ListComponent } from './components/list/list.component';
     MatButtonModule,
     FormsModule,
     ReactiveFormsModule,
-    MatGridListModule
+    MatGridListModule,
+    MatMenuModule
   ],
   providers: [
     MatDatepickerModule,  
