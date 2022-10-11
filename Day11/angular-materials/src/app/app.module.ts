@@ -20,6 +20,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GridListComponent } from './components/grid-list/grid-list.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { IconComponent } from './components/icon/icon.component';
+import { InputComponent } from './components/input/input.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { IconComponent } from './components/icon/icon.component';
     ExpansionPanelComponent,
     FormFieldComponent,
     GridListComponent,
-    IconComponent
+    IconComponent,
+    InputComponent
   ],
   imports: [
     BrowserModule,
