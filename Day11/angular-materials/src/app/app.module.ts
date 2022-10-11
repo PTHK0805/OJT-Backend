@@ -21,6 +21,7 @@ import { GridListComponent } from './components/grid-list/grid-list.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { IconComponent } from './components/icon/icon.component';
 import { InputComponent } from './components/input/input.component';
+import { ListComponent } from './components/list/list.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { InputComponent } from './components/input/input.component';
     FormFieldComponent,
     GridListComponent,
     IconComponent,
-    InputComponent
+    InputComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,
