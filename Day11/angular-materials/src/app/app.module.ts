@@ -17,13 +17,16 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
 import { FormFieldComponent } from './components/form-field/form-field.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { GridListComponent } from './components/grid-list/grid-list.component';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
     AppComponent,
     DividerComponent,
     ExpansionPanelComponent,
-    FormFieldComponent
+    FormFieldComponent,
+    GridListComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +43,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatButtonModule,
     FormsModule,
     ReactiveFormsModule,
+    MatGridListModule
   ],
   providers: [
     MatDatepickerModule,  
