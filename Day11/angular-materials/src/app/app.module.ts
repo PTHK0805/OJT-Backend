@@ -24,6 +24,8 @@ import { InputComponent } from './components/input/input.component';
 import { ListComponent } from './components/list/list.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { MatMenuModule } from '@angular/material/menu';
+import { PaginatorComponent } from './components/paginator/paginator.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import { MatMenuModule } from '@angular/material/menu';
     IconComponent,
     InputComponent,
     ListComponent,
-    MenuComponent
+    MenuComponent,
+    PaginatorComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +56,8 @@ import { MatMenuModule } from '@angular/material/menu';
     FormsModule,
     ReactiveFormsModule,
     MatGridListModule,
-    MatMenuModule
+    MatMenuModule,
+    MatPaginatorModule
   ],
   providers: [
     MatDatepickerModule,  
