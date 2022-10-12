@@ -7,11 +7,11 @@
     </button>
   </mat-drawer>
 
-  <div class="example-sidenav-content">
+  <mat-drawer-content class="example-sidenav-content">
     <button type="button" mat-raised-button (click)="drawer.toggle()">
       Toggle sidenav
     </button>
-  </div>
+  </mat-drawer-content>
 
 </mat-drawer-container>
 
@@ -38,3 +38,9 @@
   </mat-drawer-content>
 </mat-drawer-container>
 
+<mat-drawer-container>
+  <mat-drawer #drawer3>
+    Hello , I am drawer
+  </mat-drawer>
+  <mat-drawer-content ><button mat-button (click)="drawer3.toggle()">Click me</button></mat-drawer-content>
+</mat-drawer-container>
