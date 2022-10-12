@@ -36,6 +36,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { SliderComponent } from './components/slider/slider.component';
 import { SnackBarComponentExample,PizzaPartyComponent } from './components/snackbar/snack-bar-component-example';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { SortHeaderComponent } from './components/sort-header/sort-header.component';
+import { MatSortModule } from '@angular/material/sort';
 
 
 @NgModule({
@@ -49,7 +51,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     SlideToggleComponent,
     SliderComponent,
     SnackBarComponentExample,
-    PizzaPartyComponent
+    PizzaPartyComponent,
+    SortHeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -79,7 +82,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatSelectModule,
     MatSidenavModule,
     MatSlideToggleModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatSortModule
   ],
   providers: [
     MatDatepickerModule,  
