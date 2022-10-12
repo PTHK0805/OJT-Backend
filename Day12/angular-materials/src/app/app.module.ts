@@ -29,6 +29,8 @@ import { MatRippleModule } from '@angular/material/core';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { SelectComponent } from './components/select/select.component';
 import { MatSelectModule } from '@angular/material/select';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 
 @NgModule({
@@ -37,7 +39,8 @@ import { MatSelectModule } from '@angular/material/select';
     ProgressSpinnerComponent,
     RadioComponent,
     RipplesComponent,
-    SelectComponent
+    SelectComponent,
+    SidenavComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +67,8 @@ import { MatSelectModule } from '@angular/material/select';
     MatProgressSpinnerModule,
     MatRippleModule,
     MatCheckboxModule,
-    MatSelectModule
+    MatSelectModule,
+    MatSidenavModule
   ],
   providers: [
     MatDatepickerModule,  
