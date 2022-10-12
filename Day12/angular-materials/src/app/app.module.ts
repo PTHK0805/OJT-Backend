@@ -23,12 +23,14 @@ import { MatCardModule } from '@angular/material/card';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { RadioComponent } from './components/radio/radio.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProgressSpinnerComponent
+    ProgressSpinnerComponent,
+    RadioComponent
   ],
   imports: [
     BrowserModule,
