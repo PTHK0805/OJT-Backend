@@ -24,13 +24,17 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { RadioComponent } from './components/radio/radio.component';
+import { RipplesComponent } from './components/ripples/ripples.component';
+import { MatRippleModule } from '@angular/material/core';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ProgressSpinnerComponent,
-    RadioComponent
+    RadioComponent,
+    RipplesComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +58,9 @@ import { RadioComponent } from './components/radio/radio.component';
     MatCardModule,
     MatRadioModule,
     MatSliderModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatRippleModule,
+    MatCheckboxModule
   ],
   providers: [
     MatDatepickerModule,  
