@@ -38,7 +38,8 @@ import { SnackBarComponentExample,PizzaPartyComponent } from './components/snack
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { SortHeaderComponent } from './components/sort-header/sort-header.component';
 import { MatSortModule } from '@angular/material/sort';
-
+import { StepperComponent } from './components/stepper/stepper.component';
+import { MatStepperModule } from '@angular/material/stepper';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { MatSortModule } from '@angular/material/sort';
     SliderComponent,
     SnackBarComponentExample,
     PizzaPartyComponent,
-    SortHeaderComponent
+    SortHeaderComponent,
+    StepperComponent
   ],
   imports: [
     BrowserModule,
@@ -83,7 +85,8 @@ import { MatSortModule } from '@angular/material/sort';
     MatSidenavModule,
     MatSlideToggleModule,
     MatSnackBarModule,
-    MatSortModule
+    MatSortModule,
+    MatStepperModule
   ],
   providers: [
     MatDatepickerModule,  
