@@ -34,6 +34,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { SlideToggleComponent } from './components/slide-toggle/slide-toggle.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { SliderComponent } from './components/slider/slider.component';
+import { SnackBarComponentExample,PizzaPartyComponent } from './components/snackbar/snack-bar-component-example';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 
 @NgModule({
@@ -45,7 +47,9 @@ import { SliderComponent } from './components/slider/slider.component';
     SelectComponent,
     SidenavComponent,
     SlideToggleComponent,
-    SliderComponent
+    SliderComponent,
+    SnackBarComponentExample,
+    PizzaPartyComponent
   ],
   imports: [
     BrowserModule,
@@ -74,7 +78,8 @@ import { SliderComponent } from './components/slider/slider.component';
     MatCheckboxModule,
     MatSelectModule,
     MatSidenavModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatSnackBarModule
   ],
   providers: [
     MatDatepickerModule,  
