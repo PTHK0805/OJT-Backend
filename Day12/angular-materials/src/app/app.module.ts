@@ -27,6 +27,8 @@ import { RadioComponent } from './components/radio/radio.component';
 import { RipplesComponent } from './components/ripples/ripples.component';
 import { MatRippleModule } from '@angular/material/core';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { SelectComponent } from './components/select/select.component';
+import { MatSelectModule } from '@angular/material/select';
 
 
 @NgModule({
@@ -34,7 +36,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     AppComponent,
     ProgressSpinnerComponent,
     RadioComponent,
-    RipplesComponent
+    RipplesComponent,
+    SelectComponent
   ],
   imports: [
     BrowserModule,
@@ -60,7 +63,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     MatSliderModule,
     MatProgressSpinnerModule,
     MatRippleModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatSelectModule
   ],
   providers: [
     MatDatepickerModule,  
