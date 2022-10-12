@@ -33,6 +33,7 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { SlideToggleComponent } from './components/slide-toggle/slide-toggle.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { SliderComponent } from './components/slider/slider.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     RipplesComponent,
     SelectComponent,
     SidenavComponent,
-    SlideToggleComponent
+    SlideToggleComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,
