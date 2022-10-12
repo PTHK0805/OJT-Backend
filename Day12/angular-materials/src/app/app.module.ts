@@ -31,6 +31,8 @@ import { SelectComponent } from './components/select/select.component';
 import { MatSelectModule } from '@angular/material/select';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { SlideToggleComponent } from './components/slide-toggle/slide-toggle.component';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 
 @NgModule({
@@ -40,7 +42,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     RadioComponent,
     RipplesComponent,
     SelectComponent,
-    SidenavComponent
+    SidenavComponent,
+    SlideToggleComponent
   ],
   imports: [
     BrowserModule,
@@ -68,7 +71,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     MatRippleModule,
     MatCheckboxModule,
     MatSelectModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatSlideToggleModule
   ],
   providers: [
     MatDatepickerModule,  
