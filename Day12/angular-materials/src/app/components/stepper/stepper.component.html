@@ -6,8 +6,14 @@
   {{!isLinear ? 'Enable Linear mode' : 'Disable Linear mode'}}
 </button>
 
+<button mat-raised-button (click)="mode()">
+  <div *ngIf="stepperMode === 'horizontal'; then horizontalMode else verticalMode"></div>
 
-<mat-stepper [linear]="isLinear" #stepper >
+  <ng-template #horizontalMode>Enable Vertical Mode</ng-template>
+  <ng-template #verticalMode>Enable Horizontal Mode</ng-template>
+</button>
+
+<mat-stepper [linear]="isLinear" #stepper [orientation]="stepperMode">
   <mat-step [stepControl]="firstFormGroup" [editable]="isEditable">
     <form [formGroup]="firstFormGroup">
       <ng-template matStepLabel>Fill out your name</ng-template>

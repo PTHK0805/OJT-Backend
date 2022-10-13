@@ -1,3 +1,4 @@
+import { StepperOrientation } from '@angular/cdk/stepper';
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 
@@ -15,6 +16,13 @@ export class StepperComponent {
   });
   isEditable = false;
   isLinear = false;
+  stepperMode: StepperOrientation = 'horizontal'
+  isVertical = false;
 
-  constructor(private _formBuilder: FormBuilder) {}
+  mode() {
+    this.isVertical = !this.isVertical;
+    (this.isVertical) ? this.stepperMode = 'vertical' : this.stepperMode = 'horizontal';
+  }
+
+  constructor(private _formBuilder: FormBuilder) { }
 }
