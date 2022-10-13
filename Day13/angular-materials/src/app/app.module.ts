@@ -14,13 +14,17 @@ import { TabComponent } from './components/tab/tab.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
-
+import { TooltipComponent } from './components/tooltip/tooltip.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatSelectModule } from '@angular/material/select';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
     TableComponent,
     TabComponent,
     ToolbarComponent,
+    TooltipComponent,
     ],
   imports: [
     BrowserModule,
@@ -32,7 +36,11 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatFormFieldModule,
     MatPaginatorModule,
     MatTabsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatTooltipModule,
+    MatSelectModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
