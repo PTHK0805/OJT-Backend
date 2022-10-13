@@ -18,6 +18,9 @@ import { TooltipComponent } from './components/tooltip/tooltip.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatSelectModule } from '@angular/material/select';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TreeComponent } from './components/tree/tree.component';
+import { MatTreeModule } from '@angular/material/tree';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +28,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     TabComponent,
     ToolbarComponent,
     TooltipComponent,
+    TreeComponent,
     ],
   imports: [
     BrowserModule,
@@ -41,6 +45,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatSelectModule,
     FormsModule,
     ReactiveFormsModule,
+    MatTreeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
