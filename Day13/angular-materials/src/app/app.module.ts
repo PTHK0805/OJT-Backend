@@ -12,12 +12,15 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { TabComponent } from './components/tab/tab.component';
 import { MatTabsModule } from '@angular/material/tabs';
+import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
     AppComponent,
     TableComponent,
     TabComponent,
+    ToolbarComponent,
     ],
   imports: [
     BrowserModule,
@@ -28,7 +31,8 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatIconModule,
     MatFormFieldModule,
     MatPaginatorModule,
-    MatTabsModule
+    MatTabsModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
