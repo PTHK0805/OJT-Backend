@@ -45,3 +45,9 @@
 
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+
+<ul *ngFor="let movie of movies">
+  <li>Name:  {{movie.name}}</li>
+  <li>Year:   {{movie.year}}</li>
+  <li>Rating: {{movie.rating}}</li>
+</ul>

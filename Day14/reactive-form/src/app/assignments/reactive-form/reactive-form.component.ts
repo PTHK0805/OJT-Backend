@@ -2,6 +2,11 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { Component } from '@angular/core';
 import { PasswordValidators } from './validators/password.validator';
 
+export interface Movies {
+  name: string,
+  year: number,
+  rating: number,
+};
 @Component({
   selector: 'app-reactive-form',
   templateUrl: './reactive-form.component.html',
@@ -18,6 +23,12 @@ export class ReactiveFormComponent {
   //  validators: PasswordValidators.passwordsShouldMatch
   //})
   //}
+
+  movies: Movies[] = [
+    {name: 'MovieA', year: 2019, rating: 4.5},
+    {name: 'MovieB', year: 2019, rating: 4.5},
+    {name: 'MovieC', year: 2019, rating: 4.5},
+  ]
 
   constructor(fb: FormBuilder) {
     this.form = fb.group({
