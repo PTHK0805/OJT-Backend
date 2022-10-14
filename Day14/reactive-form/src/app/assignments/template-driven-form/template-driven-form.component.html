@@ -1,43 +1,70 @@
 <h1>Template-driven Form</h1>
-<mat-form-field appearance="fill">
-  <mat-label>Name</mat-label>
-  <input required matInput ngModel name="name" #name="ngModel">
-  <mat-error *ngIf="name.touched && name.invalid">
-    <mat-error *ngIf="name.errors?.['required']">Username is Required</mat-error>
-  </mat-error>
-</mat-form-field>
-
-
-<mat-form-field appearance="fill">
-  <mat-label>Enter your password</mat-label>
-  <input required matInput [type]="hidePassword ? 'password' : 'text'" ngModel name="password" #password="ngModel">
-  <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hidePassword">
-    <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
-  </button>
-  <mat-error *ngIf="password.touched && password.invalid">
-    <mat-error *ngIf="password.errors?.['required']">Password is Required</mat-error>
-  </mat-error>
-</mat-form-field>
-
-<mat-form-field appearance="fill">
-  <mat-label>Confirm Your  Password</mat-label>
-  <input required matInput [type]="hideConfirmPassword ? 'password' : 'text'" ngModel name="confirmPassword" #confirmPassword="ngModel">
-  <button mat-icon-button matSuffix (click)="hideConfirmPassword = !hideConfirmPassword" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hideConfirmPassword">
-    <mat-icon>{{hideConfirmPassword ? 'visibility_off' : 'visibility'}}</mat-icon>
-  </button>
-  <mat-error *ngIf="confirmPassword.touched">
-    <mat-error *ngIf="confirmPassword.errors?.['required']">Password is Required</mat-error>
-    <mat-error *ngIf="!isMatch(password.value, confirmPassword.value)">
-      Password Doesn't Match
+<form >
+  <mat-form-field appearance="fill">
+    <mat-label>Name</mat-label>
+    <input required matInput ngModel name="name" #name="ngModel">
+    <mat-error *ngIf="name.touched && name.invalid">
+      <mat-error *ngIf="name.errors?.['required']">Username is Required</mat-error>
     </mat-error>
-  </mat-error>
-</mat-form-field>
+  </mat-form-field>
+  
+  
+  <mat-form-field appearance="fill">
+    <mat-label>Enter your password</mat-label>
+    <input required matInput [type]="hidePassword ? 'password' : 'text'" ngModel name="password" #passwordA="ngModel">
+    <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hidePassword">
+      <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+  
+    <mat-error *ngIf="passwordA.touched && passwordA.invalid">
+      <mat-error *ngIf="passwordA.errors?.['required']">Password is Required</mat-error>
+    </mat-error>
+  </mat-form-field>
+  
+  <mat-form-field appearance="fill">
+    <mat-label>Confirm Your  Password</mat-label>
+    <input required matInput [type]="hideConfirmPassword ? 'password' : 'text'" ngModel name="confirmPassword" #passwordB="ngModel">
+    <button mat-icon-button matSuffix (click)="hideConfirmPassword = !hideConfirmPassword" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hideConfirmPassword">
+      <mat-icon>{{hideConfirmPassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+  
+    <!--<mat-error *ngIf="passwordB.touched">
+      <mat-error *ngIf="passwordB.errors?.['required']">Password is Required</mat-error>
+      <mat-error *ngIf="!(passwordA.value == passwordB.value)">Password Doesn't match</mat-error>
+    </mat-error>-->
+  
+    <div *ngIf="passwordB.touched">
+      <div *ngIf="passwordB.errors?.['required']">Password is Required</div>
+      <div *ngIf="!(passwordA.value == passwordB.value)">Password Doesn't match</div>
+    </div>
+  </mat-form-field>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
 <p>
   {{name.value}}
 </p>
 <p>
-  {{password.value}}
+  {{passwordA.value | json}}
 </p>
 <p>
-  {{confirmPassword.value}}
+  {{passwordB.value | json}}
 </p>
+
+<!--<form>
+  <label>Password: 
+    <input required type="password" ngModel name="passwordA" #passwordA="ngModel">
+  </label>
+  <div *ngIf="passwordA.touched && passwordA.invalid">
+    <div *ngIf="passwordA.errors?.['required']">Password is Required</div>
+  </div>
+
+  <label>Comfirm Password: 
+    <input required type="password" ngModel name="passwordB" #passwordB="ngModel">
+  </label>
+  <div *ngIf="passwordB.touched">
+    <div *ngIf="passwordB.errors?.['required']">Password is Required</div>
+    <div *ngIf="!(passwordA.value == passwordB.value)">Password Doesn't match</div>
+  </div>
+
+</form>-->
