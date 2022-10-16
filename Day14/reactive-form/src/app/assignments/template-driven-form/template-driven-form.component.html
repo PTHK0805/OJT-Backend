@@ -1,8 +1,8 @@
 <h1>Template-driven Form</h1>
-<form >
+<form #form="ngForm">
   <mat-form-field appearance="fill">
     <mat-label>Name</mat-label>
-    <input required matInput ngModel name="name" #name="ngModel">
+    <input required matInput [(ngModel)]="requiredForm.name" name="name" #name="ngModel">
     <mat-error *ngIf="name.touched && name.invalid">
       <mat-error *ngIf="name.errors?.['required']">Username is Required</mat-error>
     </mat-error>
@@ -11,32 +11,33 @@
   
   <mat-form-field appearance="fill">
     <mat-label>Enter your password</mat-label>
-    <input required matInput [type]="hidePassword ? 'password' : 'text'" ngModel name="password" #passwordA="ngModel">
+    <input required minlength="4" matInput [type]="hidePassword ? 'password' : 'text'" [(ngModel)]="requiredForm.passwordA" name="password" #passwordA="ngModel">
     <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hidePassword">
       <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
     </button>
   
-    <mat-error *ngIf="passwordA.touched && passwordA.invalid">
-      <mat-error *ngIf="passwordA.errors?.['required']">Password is Required</mat-error>
-    </mat-error>
+    
+    <mat-error *ngIf="passwordA.hasError('required')">Password is Required</mat-error>
+    <mat-error *ngIf="passwordA.hasError('minlength')">Password should be mininum {{passwordA.errors?.['minlength'].requiredLength}} characters</mat-error>
+   
   </mat-form-field>
   
   <mat-form-field appearance="fill">
     <mat-label>Confirm Your  Password</mat-label>
-    <input required matInput [type]="hideConfirmPassword ? 'password' : 'text'" ngModel name="confirmPassword" #passwordB="ngModel">
+    <input required matInput [type]="hideConfirmPassword ? 'password' : 'text'" [(ngModel)]="requiredForm.passwordB" name="confirmPassword" #passwordB="ngModel" (input)="textChange()">
     <button mat-icon-button matSuffix (click)="hideConfirmPassword = !hideConfirmPassword" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hideConfirmPassword">
       <mat-icon>{{hideConfirmPassword ? 'visibility_off' : 'visibility'}}</mat-icon>
     </button>
   
-    <!--<mat-error *ngIf="passwordB.touched">
-      <mat-error *ngIf="passwordB.errors?.['required']">Password is Required</mat-error>
-      <mat-error *ngIf="!(passwordA.value == passwordB.value)">Password Doesn't match</mat-error>
-    </mat-error>-->
+    
+    <mat-error *ngIf="passwordB.hasError('required')">Password is Required</mat-error>
+    <mat-error *ngIf="passwordB.touched && errors.passwordMatch">Password doesn't match</mat-error>
+
   
-    <div *ngIf="passwordB.touched">
+    <!--<div *ngIf="passwordB.touched">
       <div *ngIf="passwordB.errors?.['required']">Password is Required</div>
       <div *ngIf="!(passwordA.value == passwordB.value)">Password Doesn't match</div>
-    </div>
+    </div>-->
   </mat-form-field>
 
   <button type="submit" class="btn btn-primary">Submit</button>
@@ -45,10 +46,10 @@
   {{name.value}}
 </p>
 <p>
-  {{passwordA.value | json}}
+  {{ requiredForm.passwordA | json}}
 </p>
 <p>
-  {{passwordB.value | json}}
+  {{ requiredForm.passwordB | json}}
 </p>
 
 <!--<form>
