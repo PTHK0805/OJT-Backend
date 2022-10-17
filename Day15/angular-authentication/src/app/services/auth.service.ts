@@ -13,7 +13,7 @@ export class AuthService {
    login(userName: string, password: string): Observable<any> {
       console.log(userName);
       console.log(password);
-      this.isUserLoggedIn = userName == 'admin' && password == 'admin';
+      this.isUserLoggedIn = (userName == 'admin' && password == 'admin') ? true : false;
       localStorage.setItem('isUserLoggedIn', this.isUserLoggedIn ? "true" : "false"); 
 
    return of(this.isUserLoggedIn).pipe(

@@ -11,6 +11,7 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class LoginComponent implements OnInit {
 
+   hide:any;
    userName!: string;
    password!: string;
    formData!: FormGroup;
@@ -18,13 +19,14 @@ export class LoginComponent implements OnInit {
    constructor(private authService : AuthService, private router : Router) { }
 
    ngOnInit() {
+      this.hide = true;
       this.formData = new FormGroup({
          userName: new FormControl("admin"),
          password: new FormControl("admin"),
       });
    }
 
-   onClickSubmit(data: any) {
+   onSubmit(data: any) {
       this.userName = data.userName;
       this.password = data.password;
 
