@@ -11,12 +11,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
+import { CustomValidatorDirective } from './assignments/template-driven-form/custom-validator.directive';
 @NgModule({
   declarations: [
     AppComponent,
     FormComponent,
     ReactiveFormComponent,
-    TemplateDrivenFormComponent
+    TemplateDrivenFormComponent,
+    CustomValidatorDirective
   ],
   imports: [
     BrowserModule,

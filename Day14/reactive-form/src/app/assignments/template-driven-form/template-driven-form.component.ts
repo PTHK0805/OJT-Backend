@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgModel } from '@angular/forms';
+import { NgModel, ValidatorFn } from '@angular/forms';
 
 @Component({
   selector: 'app-template-driven-form',
@@ -20,10 +20,16 @@ export class TemplateDrivenFormComponent implements OnInit {
     passwordMatch : false,
   }
 
-  textChange() {
-    this.errors.passwordMatch = (this.requiredForm.passwordA === this.requiredForm.passwordB) ? false : true;
-  }
-  
+  myValidator: ValidatorFn = (c) => {
+    console.log(c);
+
+    if (c.value != this.requiredForm.passwordA) {
+      return { ['matchPassword']: true };
+    }
+
+    return null;
+  };
+
   constructor() { }
       
   ngOnInit(): void {
