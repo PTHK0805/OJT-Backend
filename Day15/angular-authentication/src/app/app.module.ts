@@ -8,6 +8,7 @@ import { LoginComponent } from './components/login/login.component';
 import { LogoutComponent } from './components/logout/logout.component';
 import { ExpenseEntryListComponent } from './components/expense-entry-list/expense-entry-list.component';
 import { ExpenseEntryComponent } from './components/expense-entry/expense-entry.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ExpenseEntryComponent } from './components/expense-entry/expense-entry.
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
