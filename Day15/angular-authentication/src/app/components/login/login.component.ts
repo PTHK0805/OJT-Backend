@@ -15,6 +15,7 @@ export class LoginComponent implements OnInit {
    userName!: string;
    password!: string;
    formData!: FormGroup;
+   isSuccessed!: boolean;
 
    constructor(private authService : AuthService, private router : Router) { }
 
@@ -35,7 +36,8 @@ export class LoginComponent implements OnInit {
 
       this.authService.login(this.userName, this.password)
          .subscribe( data => { 
-            console.log("Is Login Success: " + data); 
+            console.log("Is Login Success: " + data);
+            this.isSuccessed = data;
       
            if(data) this.router.navigate(['/expenses']); 
       });
