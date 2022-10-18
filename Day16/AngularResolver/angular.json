@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-resolver": {
+    "AngularResolver": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular-resolver:build:production"
+              "browserTarget": "AngularResolver:build:production"
             },
             "development": {
-              "browserTarget": "angular-resolver:build:development"
+              "browserTarget": "AngularResolver:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-resolver:build"
+            "browserTarget": "AngularResolver:build"
           }
         },
         "test": {
@@ -103,5 +103,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "ff4498ee-9e57-4485-a846-cceb58fb5229"
   }
 }
