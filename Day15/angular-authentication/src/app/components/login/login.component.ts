@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
             console.log("Is Login Success: " + data);
             this.isSuccessed = data;
       
-           if(data) this.router.navigate(['/expenses']); 
+           if(data) this.router.navigate(['/admin']); 
       });
    }
 }

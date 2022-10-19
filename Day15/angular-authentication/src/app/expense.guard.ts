@@ -26,9 +26,12 @@ export class ExpenseGuard implements CanActivate {
 
     if (val != null && val == "true") {
       if (url == "/login")
-        this.router.parseUrl('/expenses');
-      else
+        this.router.parseUrl('/admin');
+      else {
+        this.router.parseUrl('/admin');
         return true;
+      }
+      
     }
     
     return this.router.parseUrl('/login');

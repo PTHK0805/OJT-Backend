@@ -7,9 +7,9 @@ import { LogoutComponent } from './components/logout/logout.component';
 import { ExpenseGuard } from './expense.guard';
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent },
+  { path: 'login', component: LoginComponent},
   { path: 'logout', component: LogoutComponent },
-  { path: 'expenses', component: ExpenseEntryListComponent, canActivate: [ExpenseGuard]},
+  { path: 'admin', component: ExpenseEntryListComponent, canActivate: [ExpenseGuard]},
   { path: 'expenses/detail', component: ExpenseEntryComponent, canActivate: [ExpenseGuard]},
   { path: '', redirectTo: 'expenses', pathMatch: 'full' }
 ];
