@@ -11,6 +11,7 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class TableComponent implements AfterViewInit {
 
+  pageSizeOption = [5, 10, 20];
   displayedColumns: string[] = ['Id', 'FirstName', 'LastName', 'Email', 'Gender', 'JobTitle'];
   dataSource = new MatTableDataSource<Employee>(this.dataService.EmpData);
 
