@@ -4,7 +4,7 @@ import { ExpenseEntryListComponent } from './components/expense-entry-list/expen
 import { ExpenseEntryComponent } from './components/expense-entry/expense-entry.component';
 import { LoginComponent } from './components/login/login.component';
 import { LogoutComponent } from './components/logout/logout.component';
-import { ExpenseGuard } from './expense.guard';
+import { ExpenseGuard } from './services/expense.guard';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent},
