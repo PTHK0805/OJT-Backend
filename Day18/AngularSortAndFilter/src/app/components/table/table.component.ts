@@ -14,7 +14,7 @@ export class TableComponent implements AfterViewInit {
 
   pageSizeOption = [5, 10, 20];
   displayedColumns: string[] = ['Id', 'FirstName', 'LastName', 'Email', 'Gender', 'JobTitle'];
-  dataSource = new MatTableDataSource<Employee>(this.dataService.EmpData);
+  dataSource: any;
 
   constructor(private dataService: DataService) {
     console.log(dataService);
@@ -24,8 +24,22 @@ export class TableComponent implements AfterViewInit {
   @ViewChild('empTbSort') empTbSort!: MatSort;
 
   ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
-    this.dataSource.sort = this.empTbSort;
+    setTimeout(() => {
+       this.dataSource = new MatTableDataSource<Employee>(this.dataService.EmpData);
+       this.dataSource.paginator = this.paginator;
+       this.dataSource.sort = this.empTbSort;
+    })
+   
   }
+
+  applyFilter(event: Event) {
+
+    //this.dataSource.filterPredicate = function (record:any,filter:any) { 
+    //  return record.Gender.toLocaleLowerCase() == filter.toLocaleLowerCase(); 
+    //}
+
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+}
 
 }
