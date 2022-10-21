@@ -1,0 +1,43 @@
+
+<section>
+  <h1>Single List</h1>
+  <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+  
+    <div class="example-box" *ngFor="let movie of movies" cdkDrag>
+      <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+      {{movie}}
+    </div>
+  
+  </div>
+</section>
+
+<mat-divider></mat-divider>
+
+<section>
+  <h1>Multiple List</h1>
+  <div cdkDropListGroup>
+    <div class="example-container">
+      <h2>Still Doing</h2>
+  
+      <div
+        cdkDropList
+        [cdkDropListData]="todo"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)">
+        <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item}}</div>
+      </div>
+    </div>
+  
+    <div class="example-container">
+      <h2>Done</h2>
+  
+      <div
+        cdkDropList
+        [cdkDropListData]="done"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)">
+        <div class="example-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
+      </div>
+    </div>
+  </div>
+</section>
