@@ -1,0 +1,24 @@
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.button-container {
+  padding-bottom: 16px;
+  padding-top: 4px;
+  margin-right: 20px;
+  float: left;
+}
+
+button{
+  margin-left: 8px;
+}
+
+table{
+  width: 100%;
+}
+
+mat-form-field {
+  float: left;
+}
