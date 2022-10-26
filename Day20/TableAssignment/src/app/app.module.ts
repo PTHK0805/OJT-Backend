@@ -6,17 +6,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StudentsComponent } from './components/students/students.component';
+import { AddFormComponent } from './pages/add-form/add-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { DeleteDialogComponent } from './dialogs/delete-dialog/delete-dialog.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    StudentsComponent
+    StudentsComponent,
+    AddFormComponent,
+    DeleteDialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    AppAngularMaterialModule
+    AppAngularMaterialModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

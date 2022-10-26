@@ -1,0 +1,57 @@
+<mat-card>
+  <mat-progress-bar mode="indeterminate" *ngIf="isLoading"></mat-progress-bar>
+  <form [formGroup]="form">
+    <h2>Add Student Record</h2>
+    <div class="container">
+    
+      <div class="avatar">
+        <mat-label>Profile</mat-label>
+        <button type="button" mat-raised-button (click)="fileInput.click()">Choose Image</button>
+        <input hidden 
+            (change)="onFileSelected($event)" 
+            #fileInput 
+            type="file" 
+            accept=".jpeg,.jpg,.png"
+            formControlName="profile"> 
+        <span class="file-name">{{selectedFile?.name}}</span>
+      </div>
+      <mat-form-field appearance="legacy">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name">
+        <mat-error *ngIf="form.get('name')?.errors?.['required']">Name is Required</mat-error>
+      </mat-form-field>
+      
+      <mat-form-field appearance="legacy">
+        <mat-label>Address</mat-label>
+        <input matInput formControlName="address">
+        <mat-error *ngIf="form.get('address')?.errors?.['required']">Address is Required</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="legacy">
+        <mat-label>Phone</mat-label>
+        <input matInput formControlName="phone">
+        <mat-error *ngIf="form.get('phone')?.errors?.['required']">Phone is Required</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="legacy">
+        <mat-label>Year</mat-label>
+        <input matInput formControlName="year">
+        <mat-error *ngIf="form.get('year')?.errors?.['required']">Year is Required</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="legacy">
+        <mat-label>Date of Birth</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="dob">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        <mat-error *ngIf="form.get('dob')?.errors?.['required']">Birthday is Required</mat-error>
+      </mat-form-field>
+
+    </div>
+
+    <button class="submit-btn" type="submit" mat-raised-button color="primary" [disabled]="form.invalid"  (click)="onClick()">confirm</button>
+    <button class="cancel-btn" type="cancel" mat-raised-button (click)="cancel()">cancel</button>
+  </form>
+
+
+</mat-card>
