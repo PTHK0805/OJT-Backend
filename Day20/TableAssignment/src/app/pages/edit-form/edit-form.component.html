@@ -1,0 +1,51 @@
+<div class="container">
+  <mat-card>
+    <mat-progress-bar mode="indeterminate" *ngIf="isLoading"></mat-progress-bar>
+    <form [formGroup]="form">
+      <h2>Add Student Record</h2>
+      <div class="container">
+  
+        <div class="avatar">
+          <img src="{{studentRowData.profile}}">
+        </div>
+        <mat-form-field appearance="legacy">
+          <mat-label>Name</mat-label>
+          <input matInput formControlName="name" [readonly]="!editable">
+          <mat-error *ngIf="form.get('name')?.errors?.['required']">Name is Required</mat-error>
+        </mat-form-field>
+  
+        <mat-form-field appearance="legacy">
+          <mat-label>Address</mat-label>
+          <input matInput formControlName="address">
+          <mat-error *ngIf="form.get('address')?.errors?.['required']">Address is Required</mat-error>
+        </mat-form-field>
+  
+        <mat-form-field appearance="legacy">
+          <mat-label>Phone</mat-label>
+          <input matInput formControlName="phone" [readonly]="!editable">
+          <mat-error *ngIf="form.get('phone')?.errors?.['required']">Phone is Required</mat-error>
+        </mat-form-field>
+  
+        <mat-form-field appearance="legacy">
+          <mat-label>Year</mat-label>
+          <input matInput formControlName="year" [readonly]="!editable">
+          <mat-error *ngIf="form.get('year')?.errors?.['required']">Year is Required</mat-error>
+        </mat-form-field>
+  
+        <mat-form-field appearance="legacy">
+          <mat-label>Date of Birth</mat-label>
+          <input matInput [matDatepicker]="picker" formControlName="dob" [readonly]="!editable">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+          <mat-error *ngIf="form.get('dob')?.errors?.['required']">Birthday is Required</mat-error>
+        </mat-form-field>
+  
+      </div>
+  
+      <button class="submit-btn" type="submit" mat-raised-button color="primary" [disabled]="form.invalid"  (click)="onClick()">update</button>
+      <button class="cancel-btn" type="cancel" mat-raised-button (click)="cancel()">cancel</button>
+    </form>
+  
+    <p>{{studentRowData | json}}</p>
+  </mat-card>
+</div>

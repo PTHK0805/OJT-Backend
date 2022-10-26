@@ -10,6 +10,7 @@ import { StudentsService } from 'src/app/services/students.service';
 })
 export class AddFormComponent implements OnInit {
   isLoading = false;
+  editable = true;
   selectedFile: any = null;
   form;
   newData: any;
@@ -32,14 +33,14 @@ export class AddFormComponent implements OnInit {
   ngOnInit() { }
   onClick() {
     this.isLoading = true;
-
+    this.editable = false;
     setTimeout(() => {
       this.isLoading = false;
       this.newData = this.form.value;
       this.studentData.student_data = [...this.studentData.student_data, { no: ++this.id, ...this.newData }];
       this.router.navigate(['/']);
       console.log(this.studentData.student_data);
-    }, 1500)
+    }, 2000)
 
   }
 

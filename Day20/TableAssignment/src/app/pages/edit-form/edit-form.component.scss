@@ -1,0 +1,41 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  width: 400px;
+  margin: 0 auto; 
+}
+
+mat-form-field {
+  display: block;
+}
+
+.avatar {
+  margin-bottom: 10px;
+
+  mat-label {
+    margin-right: 10px;
+  }
+}
+
+.file-name {
+  margin-left: 1rem;
+}
+
+mat-card {
+  position: relative;
+  overflow: hidden;
+}
+
+mat-progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.submit-btn {
+  margin-right:20px;
+}

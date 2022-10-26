@@ -188,7 +188,9 @@ export class StudentsService {
     date_of_birth: "01/02/2003"
   }
 
-  ]
+  ];
+
+  student_row_data: any;
 
   constructor() { }
 }

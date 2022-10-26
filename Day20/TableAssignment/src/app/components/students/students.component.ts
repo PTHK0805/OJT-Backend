@@ -66,5 +66,9 @@ export class StudentsComponent implements OnInit {
         
     });
   }
+
+  editRow(rowData:any) {
+    this.studentsData.student_row_data = rowData;
+  }
   
 }
