@@ -15,10 +15,10 @@ mat-form-field {
 
 .avatar {
   margin-bottom: 10px;
-
-  mat-label {
-    margin-right: 10px;
-  }
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 100%;
 }
 
 .file-name {

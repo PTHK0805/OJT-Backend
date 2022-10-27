@@ -12,8 +12,10 @@
             #fileInput 
             type="file" 
             accept=".jpeg,.jpg,.png"
-            formControlName="profile"> 
+            formControlName="profile"
+            > 
         <span class="file-name">{{selectedFile?.name}}</span>
+        
       </div>
       <mat-form-field appearance="legacy">
         <mat-label>Name</mat-label>
@@ -39,19 +41,19 @@
         <mat-error *ngIf="form.get('year')?.errors?.['required']">Year is Required</mat-error>
       </mat-form-field>
 
-      <mat-form-field appearance="legacy">
+      <mat-form-field>
         <mat-label>Date of Birth</mat-label>
-        <input matInput [matDatepicker]="picker" formControlName="dob" [readonly]="!editable">
+        <input matInput [matDatepicker]="picker" formControlName="date_of_birth">
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-error *ngIf="form.get('date_of_birth')?.errors?.['required']">Birthday is Required</mat-error>
         <mat-datepicker #picker></mat-datepicker>
-        <mat-error *ngIf="form.get('dob')?.errors?.['required']">Birthday is Required</mat-error>
       </mat-form-field>
+      
 
     </div>
 
-    <button class="submit-btn" type="submit" mat-raised-button color="primary" [disabled]="form.invalid"  (click)="onClick()">confirm</button>
+    <button class="submit-btn" type="submit" mat-raised-button color="primary" [disabled]="form.invalid" (click)="onClick()">confirm</button>
     <button class="cancel-btn" type="cancel" mat-raised-button (click)="cancel()">cancel</button>
   </form>
-
 
 </mat-card>

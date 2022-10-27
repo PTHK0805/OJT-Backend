@@ -1,0 +1,14 @@
+
+<div mat-dialog-content>
+  <h1>Do you want to Confirm?</h1>
+  <strong><p>Name</p></strong> <p>{{data.name}}</p>
+  <strong><p>Address</p></strong> <p>{{data.address}}</p>
+  <strong><p>Phone</p></strong> <p>{{data.phone}}</p>
+  <strong><p>Year</p></strong> <p>{{data.year}}</p>
+  <strong><p>DOB</p> </strong><p>{{data.date_of_birth}}</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button (click)="doAction()" color="primary">Confirm</button>
+  <button mat-raised-button (click)="closeDialog()" mat-flat-button>Cancel</button>
+
+</div>

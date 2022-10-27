@@ -10,6 +10,8 @@ import { AddFormComponent } from './pages/add-form/add-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DeleteDialogComponent } from './dialogs/delete-dialog/delete-dialog.component';
 import { EditFormComponent } from './pages/edit-form/edit-form.component'
+import { MAT_DATE_LOCALE } from '@angular/material/core';
+import { ConfirmDialogComponent } from './dialogs/confirm-dialog/confirm-dialog.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,8 @@ import { EditFormComponent } from './pages/edit-form/edit-form.component'
     StudentsComponent,
     AddFormComponent,
     DeleteDialogComponent,
-    EditFormComponent
+    EditFormComponent,
+    ConfirmDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,10 @@ import { EditFormComponent } from './pages/edit-form/edit-form.component'
     AppAngularMaterialModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    { provide: MAT_DATE_LOCALE, useValue: 'en-GB' }
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

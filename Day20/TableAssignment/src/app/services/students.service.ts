@@ -1,6 +1,6 @@
 import { Student } from './students';
 import { Injectable } from '@angular/core';
-
+import * as moment from 'moment';
 @Injectable({
   providedIn: 'root'
 })
@@ -191,6 +191,16 @@ export class StudentsService {
   ];
 
   student_row_data: any;
+  profileImg: any;
+
+  updateData(student: any) {
+    let index = this.student_data.indexOf(this.student_row_data);
+    student.date_of_birth = moment(student.dob).format('DD/MM/YYYY')
+    this.student_data.splice(index, 1, student);
+
+    console.log(student);
+    return this.student_data;
+  }
 
   constructor() { }
 }
