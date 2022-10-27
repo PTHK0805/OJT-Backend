@@ -4,7 +4,7 @@
     <h2>Add Student Record</h2>
     <div class="container">
     
-      <div class="avatar">
+      <div *ngIf="!confirm" class="avatar">
         <mat-label>Profile</mat-label>
         <button type="button" mat-raised-button (click)="fileInput.click()">Choose Image</button>
         <input hidden 
@@ -16,6 +16,11 @@
             > 
         <span class="file-name">{{selectedFile?.name}}</span>
         
+      </div>
+
+      <div *ngIf="confirm">
+        <h3><strong>Profile</strong></h3>
+        <img class="profile" src="{{imageSrc}}" alt="">
       </div>
       <mat-form-field appearance="legacy">
         <mat-label>Name</mat-label>
@@ -52,8 +57,12 @@
 
     </div>
 
-    <button class="submit-btn" type="submit" mat-raised-button color="primary" [disabled]="form.invalid" (click)="onClick()">confirm</button>
-    <button class="cancel-btn" type="cancel" mat-raised-button (click)="cancel()">cancel</button>
+
+    <button *ngIf="!confirm" class="submit-btn" type="button" mat-raised-button color="primary" (click)="isConfirm()">submit</button>
+    <button *ngIf="!confirm" class="cancel-btn" type="button" mat-raised-button (click)="cancel()">cancel</button>
+  
+    <button *ngIf="confirm" class="submit-btn" type="submit" mat-raised-button color="primary" (click)="onClick()">confirm</button>
+    <button *ngIf="confirm" class="cancel-btn" type="cancel" mat-raised-button (click)="isConfirm()">back</button>
   </form>
 
 </mat-card>

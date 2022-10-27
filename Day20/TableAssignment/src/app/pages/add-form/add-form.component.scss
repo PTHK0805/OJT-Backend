@@ -21,6 +21,14 @@ mat-form-field {
   }
 }
 
+.profile {
+  margin-bottom: 10px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
 .file-name {
   margin-left: 1rem;
 }

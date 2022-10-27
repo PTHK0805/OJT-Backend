@@ -18,7 +18,7 @@ export class AddFormComponent implements OnInit {
   form;
   newData: any;
   id = this.studentData.student_data.length;
-
+  confirm: boolean = false;
   public imageSrc: any;
 
   constructor(private fb: FormBuilder, public studentData: StudentsService, private router: Router, public dialog: MatDialog) {
@@ -46,29 +46,27 @@ export class AddFormComponent implements OnInit {
 
       setTimeout(() => {
         this.form.value.profile = this.imageSrc;
-  
+
         console.log(this.studentData.profileImg)
-        console.log(this.form.value.profile);  
+        console.log(this.form.value.profile);
       }, 500)
-      
-  }
+
+    }
 
   }
 
   onClick() {
     this.isLoading = true;
-    this.editable = false;
-
     const dialogRef = this.dialog.open(ConfirmDialogComponent, {
       width: '350px',
-      data: this.form.value
+      data: this.newData
     });
 
-    dialogRef.afterClosed().subscribe((result:any) => {
-      if(result.event == 'Confirm'){
+    dialogRef.afterClosed().subscribe((result: any) => {
+      if (result.event == 'Confirm') {
         setTimeout(() => {
           this.isLoading = false;
-          this.newData = this.form.value;
+          //this.newData = this.form.value;
           this.newData.profile = this.imageSrc;
           this.newData.date_of_birth = moment(this.newData.date_of_birth).format('DD/MM/YYYY')
 
@@ -78,13 +76,35 @@ export class AddFormComponent implements OnInit {
           this.router.navigate(['/']);
           console.log(this.studentData.student_data);
         }, 2000)
-       }
- 
-       if (result.event == 'Cancel') {
-         console.log('Dialog is Cancel...');
-       }
-         
-     });
+      }
+
+      if (result.event == 'Cancel') {
+        console.log('Dialog is Cancel...');
+      }
+
+    });
+  }
+
+  isConfirm() {
+    this.confirm = !this.confirm;
+    this.newData = this.form.value;
+
+    if (this.confirm) {
+      this.form.controls['name'].disable();
+      this.form.controls['address'].disable();
+      this.form.controls['phone'].disable();
+      this.form.controls['year'].disable();
+      this.form.controls['date_of_birth'].disable();
+    }
+      
+    else {
+      this.form.controls['name'].enable();
+      this.form.controls['address'].enable();
+      this.form.controls['phone'].enable();
+      this.form.controls['year'].enable(); 
+      this.form.controls['date_of_birth'].enable(); 
+    }
+     
   }
 
   deleteData(element: any) {
