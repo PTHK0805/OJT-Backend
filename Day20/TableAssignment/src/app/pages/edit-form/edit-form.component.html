@@ -1,12 +1,13 @@
 <mat-card>
   <mat-progress-bar mode="indeterminate" *ngIf="isLoading"></mat-progress-bar>
   <form [formGroup]="form">
-    <h2>Update Student Record</h2>
+    <!--<h2>Update Student Record</h2>-->
     <div class="container">
 
-      <h3><b>Profile</b></h3>
-   
-      <img class="avatar" src="{{studentRowData.profile}}">
+      <div class="profile">
+        <h2 class="profile-ttl">Student's Profile</h2>
+        <img class="profile-img" src="{{studentRowData.profile}}">
+      </div>
       
       <mat-form-field appearance="legacy">
         <mat-label>Name</mat-label>

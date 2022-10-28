@@ -202,5 +202,13 @@ export class StudentsService {
     return this.student_data;
   }
 
+  deleteData(student: any) {
+    let index = this.student_data.indexOf(student);
+    this.student_data.splice(index, 1);
+    console.log(student);
+    
+    return this.student_data;
+  }
+
   constructor() { }
 }

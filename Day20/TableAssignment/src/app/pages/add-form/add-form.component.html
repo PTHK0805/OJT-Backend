@@ -1,7 +1,7 @@
 <mat-card>
   <mat-progress-bar mode="indeterminate" *ngIf="isLoading"></mat-progress-bar>
   <form [formGroup]="form">
-    <h2>Add Student Record</h2>
+    <h2 *ngIf="!confirm" >Add Student Record</h2>
     <div class="container">
     
       <div *ngIf="!confirm" class="avatar">
@@ -18,9 +18,9 @@
         
       </div>
 
-      <div *ngIf="confirm">
-        <h3><strong>Profile</strong></h3>
-        <img class="profile" src="{{imageSrc}}" alt="">
+      <div class="profile" *ngIf="confirm">
+        <h2  class="profile-ttl">Your Profile</h2>
+        <img class="profile-img" src="{{imageSrc}}" alt="">
       </div>
       <mat-form-field appearance="legacy">
         <mat-label>Name</mat-label>

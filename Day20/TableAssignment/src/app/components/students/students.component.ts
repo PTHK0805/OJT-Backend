@@ -17,12 +17,12 @@ export class StudentsComponent implements OnInit {
   pageSizeOption = [5, 10, 20];
   students: any;
   displayedColumns: string[] = ['no', 'profile', 'name', 'address', 'phone', 'year', 'date_of_birth', 'action'];
-  dataSources = new MatTableDataSource<Student>(this.studentsData.student_data);
-
-  constructor(private studentsData: StudentsService, public dialog: MatDialog) { }
+  dataSources: any;
+  constructor(private studentsData: StudentsService, public dialog: MatDialog) {}
 
   ngOnInit(): void {
     this.students = this.studentsData.student_data;
+    this.dataSources = new MatTableDataSource<Student>(this.studentsData.student_data);
   }
   
   @ViewChild(MatTable) table!: MatTable<any>;
@@ -44,10 +44,10 @@ export class StudentsComponent implements OnInit {
   }
 
   deleteData(row: any) {
-    let index = this.studentsData.student_data.indexOf(row);
-    this.studentsData.student_data.splice(index, 1);
-    console.log(row);
-    this.table.renderRows();
+    this.studentsData.deleteData(row);
+    this.dataSources = new MatTableDataSource<Student>(this.studentsData.student_data);
+    this.dataSources.paginator = this.paginator;
+
   }
 
   openDialog(element:any):void {

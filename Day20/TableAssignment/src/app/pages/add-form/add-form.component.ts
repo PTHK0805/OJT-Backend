@@ -79,6 +79,7 @@ export class AddFormComponent implements OnInit {
       }
 
       if (result.event == 'Cancel') {
+        this.isLoading = false;
         console.log('Dialog is Cancel...');
       }
 
